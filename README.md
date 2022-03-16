@@ -8,4 +8,5 @@ An backend tool made and developped by Google. Before start you can use it for f
 
 ### Summary
 
-Coming soon
+1. [Add FireBase to your project](https://github.com/jasiukiewicztymon/FireBase-Learining/blob/main/Add%20FireBase%20to%20your%20project.md)
+2. [Authentification](https://github.com/jasiukiewicztymon/FireBase-Learining/blob/main/Authentification.md)
