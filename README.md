@@ -10,3 +10,7 @@ An backend tool made and developped by Google. Before start you can use it for f
 
 1. [Add FireBase to your project](https://github.com/jasiukiewicztymon/FireBase-Learining/blob/main/Add%20FireBase%20to%20your%20project.md)
 2. [Authentification](https://github.com/jasiukiewicztymon/FireBase-Learining/blob/main/Authentification.md)
+3. [Read data](https://github.com/jasiukiewicztymon/FireBase-Learining/blob/main/Read%20data.md)
+4. [Write data](https://github.com/jasiukiewicztymon/FireBase-Learining/blob/main/Write%20data.md)
+
+> The Read and write articles are still work in progress...
