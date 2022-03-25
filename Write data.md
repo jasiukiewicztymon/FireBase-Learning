@@ -42,11 +42,13 @@ setDoc(doc(citiesRef, "SF"), {
 });
 ```
 
+![image](https://user-images.githubusercontent.com/73474137/160192208-3c2518f7-f8e9-4f4a-8ec9-9e14f24e5e0d.png)
+
 ### Writing data with document only reference
 
 Here I use as demo the example that you can find in the first article, and we write the dailyData to the *'dailySpecial/2022-03-16'* (collection/document)
 
-```
+```js
 import { initializeApp } from 'firebase/app'
 import { getAnalytics } from "firebase/analytics";
 import { getFirestore, doc, setDoc } from 'firebase/firestore'
@@ -77,3 +79,4 @@ const dailyData = {
 
 setDoc(specialOfTheDay, dailyData)
 ```
+![image](https://user-images.githubusercontent.com/73474137/160192279-232d09cd-5369-4991-999c-a65b65216b43.png)
