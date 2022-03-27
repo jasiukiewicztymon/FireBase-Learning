@@ -1,6 +1,8 @@
 ## FireBase self-learining
 
 > Here I will post all my personal notes about the FireBase self learning
+> 
+![firebaselearning](https://user-images.githubusercontent.com/73474137/160302243-e4b46e3f-d13e-40f6-b136-be141950a313.png)
 
 ### What is FireBase
 
@@ -12,5 +14,3 @@ An backend tool made and developped by Google. Before start you can use it for f
 2. [Authentification](https://github.com/jasiukiewicztymon/FireBase-Learining/blob/main/Authentification.md)
 3. [Read data](https://github.com/jasiukiewicztymon/FireBase-Learining/blob/main/Read%20data.md)
 4. [Write data](https://github.com/jasiukiewicztymon/FireBase-Learining/blob/main/Write%20data.md)
-
-> The Read and write articles are still work in progress...
