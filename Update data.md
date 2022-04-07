@@ -1,5 +1,9 @@
 # Update data
 
+The data updating is a very imporatnt thing while creating an application. For example we can do a button to update a post just with a document reference, what made it very easy.
+
+## updateDoc function
+
 To update data, we can easly use the updateDoc function like here, in the example below
 
 ```js
