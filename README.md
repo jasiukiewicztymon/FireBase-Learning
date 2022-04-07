@@ -8,6 +8,18 @@
 
 An backend tool made and developped by Google. Before start you can use it for free just create yourself an account and here you are... After this you will be able to use FireBase in your projects ! 🏆
 
+### Setup
+
+To setup the web version of the firebase, go to the config folder and download the content. After the download install the firebase and webpack npm packages.
+
+```shell
+npm install firebase
+```
+
+```shell
+npm i webpack webpack-cli -D
+```
+
 ### Summary
 
 1. [Add FireBase to your project](https://github.com/jasiukiewicztymon/FireBase-Learining/blob/main/Add%20FireBase%20to%20your%20project.md)
