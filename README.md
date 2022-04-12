@@ -1,7 +1,5 @@
 ## FireBase self-learining
 
-> Here I will post all my personal notes about the FireBase self learning
-> 
 ![firebaselearning](https://user-images.githubusercontent.com/73474137/160302243-e4b46e3f-d13e-40f6-b136-be141950a313.png)
 
 ### What is FireBase
@@ -11,6 +9,8 @@ An backend tool made and developped by Google. Before start you can use it for f
 ### Setup
 
 To setup the web version of the firebase, go to the config folder and download the content. After the download install the firebase and webpack npm packages.
+
+> To use it you need to install NodeJs on your machine
 
 ```shell
 npm install firebase
