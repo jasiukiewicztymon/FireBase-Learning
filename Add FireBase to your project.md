@@ -10,7 +10,13 @@ Here you have some examples how to add the FireBase to your project. [Google Doc
 npm install firebase
 ```
 
-2. App initialization
+2. Install WebPack with npm
+
+```nodejs
+npm install webpack webpack-cli -D
+```
+
+3. App initialization
 
 ```js
 import { initializeApp } from 'firebase/app';
@@ -23,11 +29,43 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 ```
 
-## Mobile
+4. Setup the WebPack
 
-For the mobil vesions I let you go check it in the Google's doc, because I havn't never used it 🔒
+- create a dist folder
+- create a src folder
+- add ```index.js``` in the src folder
+- create the ```webpack.config.js``` in the root of the project
 
-## First steps 👟
+And write the next content to the ```webpack.config.js```:
+
+```js
+const path = require('path')
+
+module.exports = {
+  mode: 'development',
+  entry: './src/index.js',
+  output: {
+    path: path.resolve(__dirname, 'dist'),
+    filename: 'bundle.js'
+  },
+  watch: true
+}
+```
+
+Finally in the ```package.json``` add this in scripts:
+
+```
+[...]
+"scripts": {
+  "build": "webpack"
+  [...]
+},
+[...]
+```
+
+To test your code you can write an example easy code like an ```console.log()``` and run the ```npm run build``` command to create the ```bundle.js``` file in dist which you can include in an HTML file and just watch the console.
+
+### First steps 👟
 
 A simple small code to introduce you to the Google FireBase
 
