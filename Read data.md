@@ -118,12 +118,7 @@ import { initializeApp } from "firebase/app";
 import { getFirestore, doc, onSnapshot, query, collection } from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAzqyy9hzUnCA1BU_pp2XPSYkCXHoMkHg0",
-  authDomain: "fblearning-4842a.firebaseapp.com",
-  projectId: "fblearning-4842a",
-  storageBucket: "fblearning-4842a.appspot.com",
-  messagingSenderId: "33327718981",
-  appId: "1:33327718981:web:a29099f90cf2b85f6f792c"
+  //...
 };
 
 // initialisation of the firebase
