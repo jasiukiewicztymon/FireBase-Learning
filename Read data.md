@@ -1,29 +1,78 @@
 # Read data from FireBase
 
-> coming soon (⚠ Work in progress)
+For the example used here we will use the dataset below:
 
-### How can I read data
+![image](https://user-images.githubusercontent.com/73474137/167245351-4f59d006-c8df-4ecd-89e2-537f1dd4cc81.png)
 
-You are able to read it with javascript with the node js and the vanilla. The différence between those two methods in the first one (nodeJs) you will save the data in a variable and next log it and with the vanilla Js you will insert it to the Html DOM.
+### Read data
 
-In this example we will focus on the writing data to the Html Dom without focusing much on the nodeJs version because it doesn't change a lot.
+To read data we need first initialize the database and get the collection, we want to log data. Finally, we use the `getDocs()` function to get data inside the doc.
+To do this you can use the code below:
 
-### Read FireBase data and insert it to the DOM
+To do this you can use the code below:
 
-First we need to create an Html file and link for example a *CSS* file with the style or use a *framework* like me. Next after style our page we will need a container which will be change with the data that we read.
+```js
+import { initializeApp } from "firebase/app";
+import { collection, getFirestore, getDocs } from 'firebase/firestore';
 
-All next steps will be done in the Js file
+const firebaseConfig = {
+  // ...
+};
 
-```html
-<html>
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-  </head>
-  <body>
-    <div id="container"></div>
-    <script src="./index.js"></script>
-  </body>
-</html>
+// initialisation of the firebase
+initializeApp(firebaseConfig);
+
+// getting a reference to the database
+const database = getFirestore();
+
+// getting a reference to the collection
+const colRef = collection(database, 'books');
+
+// getting the datas
+getDocs(colRef)
+  .then((snapshot) => {
+    snapshot.forEach((doc) => {
+      console.log(doc.data());
+    })
+  })
 ```
+
+The logged data should look like this:
+
+![image](https://user-images.githubusercontent.com/73474137/167245397-cb4fd3e6-1389-416c-b834-5ef893506026.png)
+
+### Writing data into the HTML DOM
+
+To write data to the HTML DOM first we need is to query select the target, and append the content like in the example below:
+
+```js
+import { initializeApp } from "firebase/app";
+import { collection, getFirestore, getDocs } from 'firebase/firestore';
+
+const firebaseConfig = {
+  // ...
+};
+
+// initialisation of the firebase
+initializeApp(firebaseConfig);
+
+// getting a reference to the database
+const database = getFirestore();
+
+// getting a reference to the collection
+const colRef = collection(database, 'books');
+
+// getting the datas
+getDocs(colRef)
+  .then((snapshot) => {
+    snapshot.forEach((doc) => {
+      // getting the target we want append content
+
+      document.querySelector("body").innerHTML += `<i>${doc.id}</i>, is named <b>"${doc.data().title}"</b> wrote by <b>${doc.data().author}</b>`;
+    })
+  })
+```
+
+The result is just below:
+
+![image](https://user-images.githubusercontent.com/73474137/167245708-3068cd38-7877-4273-9a4d-1fe863b1888a.png)
